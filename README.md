@@ -4,7 +4,7 @@
 
 # Usage 
 
-* python3 main.py (to evaluate, change main.py to train)
+* python3 main.py (evaluates Lunar Lander Continuous, change main.py to train or even evaluating another env)
 
 # TODO
 - [ ] Restructuring, 
