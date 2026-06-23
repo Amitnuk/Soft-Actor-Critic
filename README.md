@@ -1,5 +1,5 @@
 # Soft-Actor-Critic
-# A bit of context
+
 I Coded SAC to train the Vehicles in [Test Drive Unlimited: Solar Crown](https://store.steampowered.com/agecheck/app/1249970/).
 
 This repo its only has the base code, it reproduces [SAC](https://arxiv.org/abs/1801.01290).
