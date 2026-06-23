@@ -1,7 +1,8 @@
 # Soft-Actor-Critic
 
-I Coded SAC to train the Vehicles in [Test Drive Unlimited: Solar Crown (maybe)](https://store.steampowered.com/agecheck/app/1249970/)
-This is just the base code used, only reproduces the paper and used gymnasium it.
+I Coded SAC to train the Vehicles in [Test Drive Unlimited: Solar Crown](https://store.steampowered.com/agecheck/app/1249970/)
+This is just the base code used, it only attempts to reproduces the SAC paper.
+You will find checkpoints for *Ant-v5, Bipedalwalker-v3, HalfCheetah-v5, InvertedPendulum-v5, LunarLander-v3* 
 
 [Reproducing the Soft Actor Critic(SAC) Paper](https://arxiv.org/abs/1801.01290)
 
@@ -13,7 +14,8 @@ This is just the base code used, only reproduces the paper and used gymnasium it
 - [ ] Restructuring, 
 - [ ] Adding results(graphs, images, etc) and a conclusions.
 - [ ] Automate Training and Evaluation (command line)
-- [ ] [Show the results on the Test Drive Unlimited: Solar Crown (maybe)](https://store.steampowered.com/agecheck/app/1249970/)
+- [ ] Show the results on the Test Drive Unlimited: Solar Crown
+- [ ] And More
 
 
 # Notes
