@@ -1,6 +1,6 @@
 # Soft-Actor-Critic
 
-[Reproducing SAC Paper](https://arxiv.org/abs/1801.01290)
+[Reproducing the Soft Actor Critic(SAC) Paper](https://arxiv.org/abs/1801.01290)
 
 # Usage 
 
@@ -10,7 +10,7 @@
 - [ ] Restructuring, 
 - [ ] Adding results(graphs, images, etc) and a conclusions.
 - [ ] Automate Training and Evaluation (command line)
-- [ ] And More ....
+- [ ] Show the results on the Test Drive Unlimited: Solar Crown (maybe)....
 
 
 # Notes
