@@ -1,5 +1,8 @@
 # Soft-Actor-Critic
 
+I Coded SAC to train the Vehicles in [Test Drive Unlimited: Solar Crown (maybe)](https://store.steampowered.com/agecheck/app/1249970/)
+This is just the base code used, only reproduces the paper and used gymnasium it.
+
 [Reproducing the Soft Actor Critic(SAC) Paper](https://arxiv.org/abs/1801.01290)
 
 # Usage 
