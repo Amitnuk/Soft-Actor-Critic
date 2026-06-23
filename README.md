@@ -1,7 +1,6 @@
 # Soft-Actor-Critic
 
-Reproducing SAC Paper 
-[Reproducing SAC Paper ](https://arxiv.org/abs/1801.01290)
+[Reproducing SAC Paper](https://arxiv.org/abs/1801.01290)
 
 # Usage 
 
@@ -11,6 +10,7 @@ Reproducing SAC Paper
 - [ ] Restructuring, 
 - [ ] Adding results(graphs, images, etc) and a conclusions.
 - [ ] Automate Training and Evaluation (command line)
+- [ ] And More ....
 
 
 # Notes
