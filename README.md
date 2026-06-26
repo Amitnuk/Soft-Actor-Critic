@@ -13,7 +13,7 @@ You will find checkpoints for *Ant-v5, Bipedalwalker-v3, HalfCheetah-v5, Inverte
 # TODO
 - [ ] Restructuring
 - [ ] Adding results(graphs, images, etc) and a conclusions.
-- [ ] Automate Training and Evaluation (command line)
+- [X] Automate Training and Evaluation (command line)
 - [ ] Show the results on the Test Drive Unlimited: Solar Crown
 - [ ] And More
 
