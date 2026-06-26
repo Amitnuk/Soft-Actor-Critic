@@ -90,8 +90,9 @@ if __name__ == "__main__" :
 
     if args.training_mode :
         print("Training")
+        print("Warning : the line that calls the train and function is commented, it suffice to uncomment it")
         #agent.train(ckpt_path=path, finetune=False)
-        #agent.load_checkpoint(ckpt_path="./checkpoint/sac_checkpoint_" + env_name + ".pth", evaluate=True)
+        
     else :
         print("Evaluating")
         agent.load_checkpoint(ckpt_path="./checkpoint/sac_checkpoint_" + env_name + ".pth", evaluate=True)

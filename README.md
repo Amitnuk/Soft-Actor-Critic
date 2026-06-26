@@ -22,3 +22,5 @@ You will find checkpoints for *Ant-v5, Bipedalwalker-v3, HalfCheetah-v5, Inverte
 
 # Notes
 SAC fails to solve bipedalwalker
+The line that calls the train and function is commented(#agent.train(ckpt_path=path, finetune=False)), it suffice to uncomment it (agent.train(ckpt_path=path, finetune=False))
+
