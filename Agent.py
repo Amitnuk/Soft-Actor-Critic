@@ -24,7 +24,7 @@ class SACAgent :
                  tau:float=0.001,
                  gamma:float=0.99,
                  target_update_interval:int=1,
-                 env_name:str="" ) :
+                 env_name:str="") :
         
         self.Env = Env
 
@@ -200,13 +200,13 @@ class SACAgent :
                 #self.device =  torch.device("cuda:0" if torch.cuda.is_available() else "cpu") 
                 #self.policy_model.alpha = torch.tensor(1.0).to(self.device)
             if  self.nb_updates and i % 10 == 0 and i >= 50 :
-                final_eval_score, score_std = self.evaluate(collect_data=False)        
+                final_eval_score, score_std = self.evaluate(collect_data=False, eval_from_training=True)        
                 self.policy_model.train()     
 
             print(f"episode :{i} steps :{self.steps}, replayBuffer Size :{len(self.replay_buffer)}")
             
 
-    def evaluate(self, suffix=".pth", collect_data=False):
+    def evaluate(self, suffix=".pth", collect_data=False, eval_from_training=False):
         #rewards = []
         #print("eval")
         self.policy_model.eval()
@@ -225,7 +225,7 @@ class SACAgent :
             if is_terminated: 
                 break
          
-        if self.first_checkpoint_save  :
+        if self.first_checkpoint_save and eval_from_training :
             self.save_checkpoint(env_name=self.env_name, reward=np.mean(rewards), suffix=suffix)
             self.first_checkpoint_save =  False
             self.reward = rewards
@@ -234,7 +234,7 @@ class SACAgent :
         else :
             
             
-            if self.reward < rewards :
+            if self.reward < rewards and eval_from_training :
                 self.save_checkpoint(env_name=self.env_name, reward=np.mean(rewards), suffix=suffix)
                 self.reward = rewards
                 print(f"{self.reward,np.std(rewards) }")      
@@ -244,10 +244,10 @@ class SACAgent :
 
     def save_checkpoint(self, env_name, reward, suffix="", ckpt_path=None) :
 
-        if not os.path.exists("./checkpoint/") :
-            os.makedirs("/home/kuntima/Workspace/UniverseRL/SAC/checkpoint/")
+        if not os.path.exists("./checkpoints/") :
+            os.makedirs("./checkpoints/")
         if ckpt_path is None :
-            self.ckpt_path = "/home/kuntima/Workspace/UniverseRL/SAC/checkpoint/sac_checkpoint_{}{}".format(env_name, suffix)
+            self.ckpt_path = "./checkpoints/sac_checkpoint_{}{}".format(env_name, suffix)
         
         print(f"Saving models to {self.ckpt_path}")
         torch.save({'policy_state_dict': self.policy_model.state_dict(),
