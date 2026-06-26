@@ -7,8 +7,10 @@ You will find checkpoints for *Ant-v5, Bipedalwalker-v3, HalfCheetah-v5, Inverte
 
 
 # Usage 
-
-* python3 main.py (evaluates Lunar Lander Continuous, change main.py to train or even evaluating another env, feel free)
+## Evaluation
+* python3 main.py 
+## Training
+* python3 main.py --training_mode
 
 # TODO
 - [ ] Restructuring
